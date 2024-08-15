@@ -10,6 +10,7 @@ $layout-breakpoint-small: 360px
 $layout-breakpoint-middle: 768px
 $layout-breakpoint-lg: 1227px
 $dark-bg: #252B42
+$secondary-color-1: #40BB15
 @mixin reset-list
     margin: 0
     padding: 0
@@ -22,14 +23,22 @@ body,html
     width: 100%
     height: 100%
     font-family: "Montserrat", sans-serif
-    background-color: $text-color
+    overflow-x: hidden
 ul > li
     list-style: none
 a
     text-decoration: none
     color: $light-background-color
+.header__container
+    background: $text-color
+.layout--1
+    width: 100%
+    background: $text-color
+.layout--2
+    max-width: 1050px
+    margin: 0 auto
 .header
-    width: 92%
+    max-width: 1322px
     height: 91px
     margin: 0 auto
     display: flex
@@ -42,17 +51,19 @@ a
         line-height: 32px
         letter-spacing: 0.1px
     &__navigations
-        width: 61%
+        max-width: 815px
+        width: 100%
         height: 58px
         display: flex
         justify-content: space-between
         align-items: center
-        margin: auto 0
-        position: relative
-        right: 40px
+    &__navigation--1
+        max-width: 275px
+        width: 100%
     &__list--1
+        max-width: 275px
+        width: 100%
         display: flex
-        gap: 21px
         justify-content: space-between
         align-items: center
         font-size: 14px
@@ -60,7 +71,8 @@ a
         letter-spacing: 0.2px
 
     &__navigation--2
-        width: 40%
+        max-width: 300px
+        width: 100%
         height: 100%
         display: flex
         align-items: center
@@ -86,11 +98,13 @@ a
                 font-weight: 700
                 text-wrap: nowrap
 .main
+    max-width: 1050px
+    margin: 0 auto
     &__section--1
         display: flex
         flex-direction: column
         &__article--1
-            width: 60%
+            max-width: 700px
             margin: 0px auto
             padding: 40px 0px
             display: flex
@@ -110,6 +124,7 @@ a
                 color: $light-background-color
                 text-wrap: balance
             & > h4
+                max-width: 540px
                 font-size: 24px
                 line-height: 30px
                 letter-spacing: 0.2px
@@ -140,7 +155,7 @@ a
             margin: 80px 0px
 
 .box__container
-    width: 72%
+    max-width: 1046px
     margin: 80px auto
     display: flex
     align-items: center
@@ -180,7 +195,7 @@ a
     width: 100%
     padding: 80px 0px
     display: flex
-    justify-content: center
+    justify-content: space-between
     align-items: center
     background-size: 100%
     background: $light-background-color
@@ -192,7 +207,6 @@ a
         align-items: flex-start
         font-weight: 700
         letter-spacing: 0.2px
-        margin-right: 100px
         & > hr
             width: 94px
             height: 7px
@@ -215,17 +229,12 @@ a
                 color: $primary-color
                 font-size: 14px
                 line-height: 20px
-    &__article--2
-        margin-left: 100px
-
 .main__section--3
     background: $light-background-color
     display: flex
     flex-direction: column
     gap: 110px
     &__article
-        width: 72%
-        margin: 0 auto
         display: flex
         flex-direction: column
         gap: 10px
@@ -315,6 +324,39 @@ a
         letter-spacing: 0.1px
         &:first-of-type
             color: $text-color
-    & > p
-        color: $second-text-color
+.text__parag
+    color: $second-text-color
+    font-size: 14px
+    line-height: 20px
+    letter-spacing: 0.2px
+.download__container
+    display: flex
+    gap: 10px
+    align-items: center
+    & > span
         font-size: 14px
+        line-height: 24px
+        letter-spacing: 0.2px
+        color: $second-text-color
+.price__article
+    display: flex
+    line-height: 24px
+    align-items: center
+    letter-spacing: 0.1px
+    font-weight: 700
+    gap: 5px
+    & > h5
+        color: $second-text-color
+        font-size: 16px
+
+    & > h6
+        color: $secondary-color-1
+        font-size: 16px
+
+.details__container
+    display: flex
+    align-items: center
+    gap: 10px
+    & > div
+        display: flex
+        align-items: center
