@@ -11,6 +11,12 @@ $layout-breakpoint-middle: 768px
 $layout-breakpoint-lg: 1227px
 $dark-bg: #252B42
 $secondary-color-1: #40BB15
+
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
 @mixin reset-list
     margin: 0
     padding: 0
@@ -258,17 +264,15 @@ a
             font-weight: 400
             color: $second-text-color
     &__cards
-        width: 72%
-        margin: 0 auto
         display: flex
         gap: 30px
         align-items: center
         &--1
             display: flex
             flex-direction: column
+            max-width: 238px
             &__container--1
                 position: relative
-
 .sale__container
     padding: 0px 10px
     border-radius: 3px
@@ -306,16 +310,15 @@ a
             letter-spacing: 0.2px
             color: $primary-color
         & > div
-            width: 50px
-            height: 26px
+            max-width: 50px
             display: flex
             background: $dark-bg
             gap: 5px
             align-items: center
             border-radius: 20px
-            padding: 5px
+            padding: 5px 10px
             font-size: 12px
-            line-height: 20px
+            line-height: 16px
             color: $light-background-color
     & > h5
         font-size: 16px
@@ -360,3 +363,30 @@ a
     & > div
         display: flex
         align-items: center
+        gap: 5px
+        & > span
+            font-size: 12px
+            color: $second-text-color
+            text-wrap: nowrap
+            line-height: 16px
+.card__button
+    max-width: 141px
+    padding: 10px 20px
+    display: flex
+    align-items: center
+    gap: 10px
+    border-radius: 37px
+    border: 1px solid $primary-color
+    background: none
+    & > span
+        font-size: 14px
+        line-height: 24px
+        font-weight: 700
+        letter-spacing: 0.2px
+        color: $primary-color
+        text-wrap: nowrap
+.star-icon
+    color: #FFCE31
+    width: 15px
+    height: 15px
+    @include center
